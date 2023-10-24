@@ -1,0 +1,27 @@
+[
+  {
+    "NumberOfCompetencies": 3
+  },
+  {
+    "CompetencyClass": "BUILDING AND MANAGING RELATIONSHIPS",
+    "Competencies": [
+      {
+        "Name": "Networking & Co-Creation",
+        "Explanation": "\"This technique is very fast to transfer knowledge to students and help the student to have more confidence in her/his ability to think and solve problems instead of just memorizing the content of the course.\" This quote indicates that active student participation and co-creation of knowledge are encouraged, fostering networking skills and collaborative relationships."
+      }
+    ]
+  },
+  {
+    "CompetencyClass": "BUSINESS ECONOMY AND SOCIETY",
+    "Competencies": [
+      {
+        "Name": "Business & Entrepreneurial Literacy",
+        "Explanation": "\"Topics analyzed include analysis of financial markets...\" This quote highlights the focus on understanding financial markets, which is essential for business and entrepreneurial literacy.."
+      },
+      {
+        "Name": "Economic & Financial Literacy",
+        "Explanation": "\"Topics analyzed include analysis of financial markets...\" This quote emphasizes the analysis of financial markets, which is a key component of economic and financial literacy."
+      }
+    ]
+  }
+]
