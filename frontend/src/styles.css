@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+/* .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.main-content {
+    height: 100%;
+} */
+
+.filler-row {
+    height: 100%;
+}
+#syllabusText {
+    width: 100%;
+  }

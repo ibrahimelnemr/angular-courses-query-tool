@@ -1,82 +1,47 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand mx-4 m-2" href="#">Syllabus Analysis</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home </a>
-        </li>
-      </ul>
+<app-base-layout>
+  <div class="row">
+    <div class="col-12">
+      <div class="display-2 my-4">Syllabus Analysis Tool</div>
     </div>
-  </nav>
-  
-  <div class="container d-flex align-items-center h-100">
-    <div class="row">
-      <div class="col">
-        <div class="display-2 my-4">Syllabus Analysis Tool</div>
+
+    <div class="col-12">
+      <div class="form-group">
+        <label for="exampleTextarea"></label>
+        <textarea
+          class="form-control"
+          id="exampleTextarea"
+          rows="5"
+          placeholder="Enter Syllabus Text"
+        ></textarea>
       </div>
-      <style>
-        /* CSS to make the input field full-width */
-        #syllabusText {
-          width: 100%;
-        }
-      </style>
-      <body>
-        <div class="col">
-          <div class="form-group">
-            <label for="exampleTextarea"></label>
-            <textarea
-              class="form-control"
-              id="exampleTextarea"
-              rows="5"
-              placeholder="Enter Syllabus Text"
-            ></textarea>
-          </div>
-          <br />
-          <button (click)="fetchData()" type="submit" class="btn btn-primary">Submit</button>
+      <br />
+      <button (click)="fetchData()" type="submit" class="btn btn-primary">
+        Submit
+      </button>
+    </div>
+
+    <div *ngIf="data">
+      <div class="mb-5">
+        <div class="lead my-5">
+          The analysis of your syllabus found
+          {{ data[0].NumberOfCompetencies }} competencies.
         </div>
-  
-  
-        <div *ngIf="data">
-          <div class="mb-5">
-          <div class="lead my-5">
-            The analysis of your syllabus found
-            {{ data[0].NumberOfCompetencies }} competencies.
+
+        <div *ngFor="let item of data">
+          <div class="fs-4 m-2">
+            {{ item.CompetencyClass }}
           </div>
-  
-          <div *ngFor="let item of data">
-            <div class="fs-4 m-2">
-              {{ item.CompetencyClass }}
+
+          <div *ngFor="let Competency of item.Competencies">
+            <div class="fs-5 m-2">
+              {{ Competency.Name }}
             </div>
-  
-            <div *ngFor="let Competency of item.Competencies">
-              <div class="fs-5 m-2">
-                {{ Competency.Name }}
-              </div>
-              <div class="fs-5 m-2">
-                {{ Competency.Explanation }}
-              </div>
+            <div class="fs-5 m-2">
+              {{ Competency.Explanation }}
             </div>
           </div>
         </div>
       </div>
-      </body>
     </div>
   </div>
-  
-  <footer class="bg-dark text-light text-center p-3">
-    <div>
-      <p>&copy; 2023 All rights reserved.</p>
-    </div>
-  </footer>
-  
+</app-base-layout>

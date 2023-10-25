@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SyllabusAnalysisComponent } from './components/syllabus-analysis/syllabus-analysis.component';
 import { SyllabusQueryComponent } from './components/syllabus-query/syllabus-query.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BaseLayoutComponent } from './layout/base-layout/base-layout.component';
 
 
 
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     SyllabusAnalysisComponent,
-    SyllabusQueryComponent
+    SyllabusQueryComponent,
+    BaseLayoutComponent
   ],
   imports: [
     CommonModule,

@@ -3,6 +3,7 @@ import { SyllabusQueryService } from 'src/app/services/syllabus-query.service';
 import { FormBuilder, FormGroup, Validators, FormControl, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { course } from 'src/app/models/course';
+import { Router } from '@angular/router';
 
 
 @Component({

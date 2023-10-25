@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SyllabusAnalysisService } from 'src/app/services/syllabus-analysis.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-syllabus-analysis',
