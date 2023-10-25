@@ -1,16 +1,12 @@
-CREATE db courses_db;
-
 -- createdb courses_db
 
 -- psql courses_db
 
--- drop table courses;
+-- \COPY arch FROM './arch.csv' WITH CSV HEADER;
 
--- \COPY courses FROM './arch.csv' WITH CSV HEADER;
+-- SELECT * FROM arch WHERE creative_thinking LIKE '%Visual Thinking%';
 
--- SELECT * FROM courses WHERE creative_thinking LIKE '%Visual Thinking%';
-
--- SELECT course_name FROM courses WHERE creative_thinking LIKE '%Visual Thinking%';
+-- SELECT course_name FROM arch WHERE creative_thinking LIKE '%Visual Thinking%';
 
 
 CREATE TABLE courses (
