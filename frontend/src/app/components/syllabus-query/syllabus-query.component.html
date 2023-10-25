@@ -37,7 +37,7 @@
           <label for="item">Select a competency:</label>
           <select class="form-control" name="item" #item>
             <option value="Diligence">Diligence</option>
-            <option value="Diligence">Diligence</option>
+            <option value="Visual%20Thinking">Visual Thinking</option>
             
           </select>
         </div>
@@ -45,7 +45,6 @@
       </div>
 
       <div *ngIf="data">
-
       
       <div *ngFor="let item of data" class="lead">
         {{ item.course_name }}

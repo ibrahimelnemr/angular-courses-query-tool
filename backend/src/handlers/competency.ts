@@ -29,7 +29,7 @@ const show = async (req: express.Request, res: express.Response) =>
     }
     catch (err) 
     {
-
+        console.log(`Error: Could not fetch : ${err}`);
         res.status(400);
         res.json(err);
     }
