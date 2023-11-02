@@ -3,6 +3,12 @@ import { SyllabusAnalysisService } from './syllabus-analysis.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+// For express backend port is 3000
+const PORT: number = 3000; 
+
+// For django backend port is 8000
+// const PORT: number = 8000; 
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +18,8 @@ export class SyllabusQueryService {
   constructor(private http: HttpClient) {}
 
   getData(item: string): Observable<any> {
-    const url = `http://localhost:3000/courses?competency=${item}`;
+
+    const url = `http://localhost:${PORT}/courses?competency=${item}`;
     console.log(url);
     return this.http.get<[]>(url);
   }
