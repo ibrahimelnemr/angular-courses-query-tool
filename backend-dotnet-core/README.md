@@ -5,11 +5,9 @@ Create a local posgresql database with the following credentials:
 
 User: postgres
 Password: password
-Database: courses_db_django
+Database: courses_db_dotnet
 
-Superuser:
-username: user
-password: password
+
 
 **API Documentation**
 
