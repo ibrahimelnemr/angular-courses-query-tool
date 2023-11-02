@@ -9,6 +9,9 @@ const PORT: number = 3000;
 // For django backend port is 8000
 // const PORT: number = 8000; 
 
+// For dotnet backend port is 7288
+// const PORT: number = 7288;
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +21,9 @@ export class SyllabusQueryService {
   constructor(private http: HttpClient) {}
 
   getData(item: string): Observable<any> {
+
+    // for dotnet core
+    // const url = `https://localhost:7288/api/Course?competency=${item}`;
 
     const url = `http://localhost:${PORT}/courses?competency=${item}`;
     console.log(url);
