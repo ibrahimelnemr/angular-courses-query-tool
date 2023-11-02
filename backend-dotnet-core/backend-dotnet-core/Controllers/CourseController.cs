@@ -27,32 +27,36 @@ namespace backend_dotnet_core.Controllers
             var courseProperties = typeof(Course).GetProperties();
 
             var courses = _context.Courses
-                .Where(c =>
-                    courseProperties
-                        .Where(p => p.PropertyType == typeof(string) && p.Name != "course_name"
-                       && p.Name != "course_comments")
-                        .Any(p =>
-                         (string)p.GetValue(c, null) != null &&
-                            ((string)p.GetValue(c, null))
-                            .IndexOf(competency, StringComparison.OrdinalIgnoreCase) >= 0
-                        )
-                )
+                .AsEnumerable()
+                .Where(c => courseProperties
+                    .Where(
+                        p => p.PropertyType == typeof(string)
+                        && p.Name != "course_name"
+                        && p.Name != "course_comments"
+                    )
+                    .Any(p =>
+                        (string)p.GetValue(c, null) != null &&
+                        ((string)p.GetValue(c,null))
+                        .IndexOf(competency,StringComparison.OrdinalIgnoreCase) >= 0)
+                    )
+
                 .Select(c => c.course_name)
+                .Distinct()
                 .ToList();
 
             return Ok(courses);
         }
 
         // GET: api/Course
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Course>>> GetCourses()
-        {
-            if (_context.Courses == null)
-            {
-                return NotFound();
-            }
-            return await _context.Courses.ToListAsync();
-        }
+        //[HttpGet]
+        //public async Task<ActionResult<IEnumerable<Course>>> GetCourses()
+        //{
+        //    if (_context.Courses == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return await _context.Courses.ToListAsync();
+        //}
 
         // GET: api/Course/5
         [HttpGet("{id}")]
