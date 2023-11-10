@@ -10,7 +10,7 @@ The frontend allows for either simulating the process of analyzing a syllabus or
 
 The backend contains the necessary database migrations, but requires the creation of a local postgresql database in order to perform the migrations upon it, with the following credentials:
 
-User: postgres
-Password: password
-Database: courses_db
-Host: 127.0.0.1
+User: `postgres`
+Password: `password`
+Database: `courses_db`
+Host: `127.0.0.1`
