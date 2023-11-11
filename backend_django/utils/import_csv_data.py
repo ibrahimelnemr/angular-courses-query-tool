@@ -2,6 +2,7 @@ import csv
 import os
 import sys
 from django.core.wsgi import get_wsgi_application
+from courses.models import Course
 
 project_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(project_path)
@@ -10,8 +11,6 @@ sys.path.append(project_path)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'backend_django.settings'
 
 application = get_wsgi_application()
-
-from courses.models import Course
 
 csv_file = os.path.abspath(os.path.join(project_path, 'utils/arch.csv')) 
 
